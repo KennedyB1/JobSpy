@@ -1,0 +1,119 @@
+JobSpy - Supported Countries
+==============================
+Total: 74 countries (including 2 internal: US_CANADA, WORLDWIDE)
+
+The countries below are defined in jobspy/model.py (Country enum).
+Each country supports scraping from Indeed. Some also support Glassdoor.
+
+Legend:
+  [I] = Indeed only
+  [I+G] = Indeed + Glassdoor
+
+
+ASIA (16 countries)
+-------------------
+  1.  Bangladesh [I]
+  2.  China [I]
+  3.  Hong Kong [I+G]
+  4.  India [I+G]
+  5.  Indonesia [I]
+  6.  Japan [I]
+  7.  Malaysia [I+G]
+  8.  Pakistan [I]
+  9.  Philippines [I]
+ 10.  Singapore [I+G]
+ 11.  South Korea [I]
+ 12.  Taiwan [I]
+ 13.  Thailand [I]
+ 14.  Vietnam [I+G]
+ 15.  Qatar [I]
+ 16.  Kuwait [I]
+
+MIDDLE EAST & AFRICA (10 countries)
+-----------------------------------
+ 17.  Bahrain [I]
+ 18.  Egypt [I]
+ 19.  Israel [I]
+ 20.  Morocco [I]
+ 21.  Nigeria [I]
+ 22.  Oman [I]
+ 23.  Saudi Arabia [I]
+ 24.  South Africa [I]
+ 25.  United Arab Emirates [I]
+ 26.  Turkey [I]
+
+EUROPE (27 countries)
+---------------------
+ 27.  Austria [I+G]
+ 28.  Belgium [I+G]
+ 29.  Bulgaria [I]
+ 30.  Croatia [I]
+ 31.  Cyprus [I]
+ 32.  Czech Republic (Czechia) [I]
+ 33.  Denmark [I]
+ 34.  Estonia [I]
+ 35.  Finland [I]
+ 36.  France [I+G]
+ 37.  Germany [I+G]
+ 38.  Greece [I]
+ 39.  Hungary [I]
+ 40.  Ireland [I+G]
+ 41.  Italy [I+G]
+ 42.  Latvia [I]
+ 43.  Lithuania [I]
+ 44.  Luxembourg [I]
+ 45.  Malta [I+G]
+ 46.  Netherlands [I+G]
+ 47.  Norway [I]
+ 48.  Poland [I]
+ 49.  Portugal [I]
+ 50.  Romania [I]
+ 51.  Slovakia [I]
+ 52.  Slovenia [I]
+ 53.  Spain [I+G]
+ 54.  Sweden [I]
+ 55.  Switzerland [I+G]
+ 56.  Ukraine [I]
+ 57.  UK (United Kingdom) [I+G]
+
+NORTH AMERICA (4 countries)
+----------------------------
+ 58.  Canada [I+G]
+ 59.  Costa Rica [I]
+ 60.  Mexico [I+G]
+ 61.  Panama [I]
+ 62.  USA (United States) [I+G]
+
+SOUTH AMERICA (7 countries)
+----------------------------
+ 63.  Argentina [I+G]
+ 64.  Brazil [I+G]
+ 65.  Chile [I]
+ 66.  Colombia [I]
+ 67.  Ecuador [I]
+ 68.  Peru [I]
+ 69.  Uruguay [I]
+ 70.  Venezuela [I]
+
+OCEANIA (2 countries)
+----------------------
+ 71.  Australia [I+G]
+ 72.  New Zealand [I+G]
+
+INTERNAL (not for direct use)
+------------------------------
+ 73.  US_CANADA - internal use for ZipRecruiter
+ 74.  WORLDWIDE - internal use for LinkedIn
+
+
+Notes
+-----
+- The country_indeed parameter in scrape_jobs() accepts the country name
+  as a string (e.g., "usa", "united states", "uk", "united kingdom",
+  "czech republic", "czechia").
+- Glassdoor is available for countries marked [I+G]. For countries with
+  only Indeed support, Glassdoor scraping is not available.
+- ZipRecruiter and LinkedIn scrape globally and don't require a specific
+  country parameter.
+- Bayt, Naukri, and BDJobs are region-specific job boards (Middle East,
+  India, and Bangladesh respectively).
