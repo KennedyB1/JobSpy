@@ -9,16 +9,16 @@ Searches for a company's job postings across LinkedIn, Google, and Indeed
 HOW TO RUN:
 
     # Use the default company (Novo Nordisk)
-    python find_novo_nordisk_countries.py
+    python find_company_jobs.py
 
     # Search for a different company
-    python find_novo_nordisk_countries.py "Google"
+    python find_company_jobs.py "Google"
 
     # Search with custom time span (e.g. 5 years) and more results
-    python find_novo_nordisk_countries.py "Amazon" --hours 43800 --results 50
+    python find_company_jobs.py "Amazon" --hours 43800 --results 50
 
     # See all options
-    python find_novo_nordisk_countries.py --help
+    python find_company_jobs.py --help
 
 PARAMETERS (edit at the top of this script):
     COMPANY        - Name of the company to search for
@@ -140,5 +140,7 @@ pd.set_option("display.width", 200)
 print(result.to_string(index=False))
 
 # Save to CSV
-result.to_csv("novo_nordisk_jobs.csv", index=False)
-print(f"\nResults saved to novo_nordisk_jobs.csv")
+safe_name = COMPANY.lower().replace(" ", "_").replace("/", "_")
+output_file = f"{safe_name}_jobs.csv"
+result.to_csv(output_file, index=False)
+print(f"\nResults saved to {output_file}")

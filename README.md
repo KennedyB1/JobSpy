@@ -4,6 +4,8 @@
 
 C:/Users/user/AppData/Local/Python/pythoncore-3.14-64/python.exe app.py
 
+C:/Users/user/AppData/Local/Python/pythoncore-3.14-64/python.exe find_novo_nordisk_countries.py
+
 **JobSpy** is a job scraping library with the goal of aggregating all the jobs from popular job boards with one tool.
 
 ## Features
